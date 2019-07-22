@@ -4,7 +4,7 @@
   "description": "",
   "main": "resender.js",
   "scripts": {
-    "start": "pm2 start resender.pm2"
+    "start": "pm2 start pm2.json"
   },
   "keywords": [],
   "author": "",
