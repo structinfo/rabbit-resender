@@ -1,0 +1,15 @@
+{
+  "name": "rabbit-resender",
+  "version": "0.1.0",
+  "description": "",
+  "main": "resender.js",
+  "scripts": {
+    "start": "pm2 start resender.pm2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  }
+}
