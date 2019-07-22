@@ -3,9 +3,9 @@
   "uriSend": "amqp://login2:password2@200.200.200.200:5672",
 
   "exchangeMap": [
-    [ "exchangeToGet1",   "exchangeToSend1" ],
-    [ "exchangeToGet2",   "exchangeToSend2" ],
-    [ "exchangeToGet3",   "exchangeToSend3" ]
+    [ "exchangeToGetFrom1",   "exchangeToSendTo1" ],
+    [ "exchangeToGetFrom2",   "exchangeToSendTo2" ],
+    [ "exchangeToGetFrom3",   "exchangeToSendTo3" ]
   ],
 
   "queuePrefix": "resender.",
