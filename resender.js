@@ -1,6 +1,6 @@
 var amqp = require('amqplib');
 
-var config = require('./resender.json');
+var config = require('./config.json');
 
 var send = {
     conn: null,
