@@ -1,3 +1,6 @@
+# JetBrains tools (WebStorm, PhpStorm etc) settings folder
+.idea
+
 # Logs
 logs
 *.log
