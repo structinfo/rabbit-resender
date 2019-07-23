@@ -14,22 +14,22 @@ var get = {
 
 function checkConfigParams(config) {
     if (!config) {
-        console.log("Please create resender.json file and configure parameters in this file (see README file)");
+        console.log("Please create config.json file and configure parameters in this file (see README file)");
         return false;
     }
 
     // uriGet, uriSend and exchangeMap are required parameters and has no default settings
 
     if (!config.uriGet) {
-        console.log("Please set uriGet parameter in resender.json to your 'master' RabbitMQ connect URI");
+        console.log("Please set uriGet parameter in config.json to your 'master' RabbitMQ connect URI");
         return false;
     }
     if (!config.uriSend) {
-        console.log("Please set uriSend parameter in resender.json to your 'slave' RabbitMQ connect URI");
+        console.log("Please set uriSend parameter in config.json to your 'slave' RabbitMQ connect URI");
         return false;
     }
     if (!config.exchangeMap) {
-        console.log("Please define exchangeMap in resender.json");
+        console.log("Please define exchangeMap in config.json");
         return false;
     }
 
@@ -43,13 +43,13 @@ function checkConfigParams(config) {
         if (config[config.queueOptions]) {
             config.queueOptions = config[config.queueOptions];
         } else {
-            console.log("queueOptions parameter is set to '"+ config.queueOptions +"' profile which is not defined in resender.json. Falling back to default queueOptions settings.");
+            console.log("queueOptions parameter is set to '"+ config.queueOptions +"' profile which is not defined in config.json. Falling back to default queueOptions settings.");
             config.queueOptions = null;
         }
     }
     if (!config.queueOptions) {
         config.queueOptions = { // default options
-            autoDelete: true
+            exclusive: true
         }
     }
 
@@ -57,7 +57,7 @@ function checkConfigParams(config) {
 }
 
 function main(config) {
-    console.log('RabbitMQ Resender v0.1 (https://github.com/structinfo/rabbit-resender)');
+    console.log('RabbitMQ Resender v0.1.0 (https://github.com/structinfo/rabbit-resender)');
 
     if (!checkConfigParams(config)) return;
 

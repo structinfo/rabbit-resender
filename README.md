@@ -1,22 +1,33 @@
-# RabbitMQ Resender v0.1
+# RabbitMQ Resender v0.1.0
 
+Resends messages from selected exchanges in one instance of RabbitMQ
+to exchanges in another instance.
+Useful for testing and other purposes.
+Requires Node.js & NPM.
 
-### Use in 3 easy steps:
+### Use in 4 easy steps:
 
 ##### Step 1
+
+You need Node.js & NPM to be installed.
+
+##### Step 2
+
 ```
 npm install
 ```
 
-##### Step 2
-Configure in resender.json file.
-
 ##### Step 3
+
+Configure Resender via config.json file.
+
+##### Step 4
+
 ```
 npm start
 ```
 
-### Sample resender.json file
+### Sample config.json file
 
 ```
 {
@@ -35,7 +46,7 @@ npm start
 
   "queueOptionsLight": {
     "description": "Set queueOptions=queueOptionsLight if you resend messages for testing purposes and don't worry much if some messages will be lost (when resender is stopped etc).",
-    "autoDelete": true
+    "exclusive": true
   },
   "queueOptionsDurable": {
     "description": "Set queueOptions=queueOptionsDurable if it is important for you to resend all the messages.",
