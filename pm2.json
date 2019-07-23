@@ -2,6 +2,7 @@
   apps: [{
     name: 'resender',
     script: './resender.js',
-    log_file: './resender.log'
+    log_file: './resender.log',
+    log_date_format: 'YYYY-MM-DD HH:mm'
   }]
 }
